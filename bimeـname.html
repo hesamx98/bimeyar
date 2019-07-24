@@ -35,7 +35,7 @@
 
   <div class="content">
     <main>
-      <div id="add" class="tabcontent">
+      <div id="add">
 
 
         <div class="form">
@@ -71,16 +71,122 @@
             <input type="text" class="input" id="time" name="time">
 
             <label for="adviser_name">نام مشاور :</label>
-            <input type="text" class="input" id="adviser_name" name="adviser_name" >
+            <input type="text" class="input" id="adviser_name" name="adviser_name">
 
             <input class="input_button" type="submit" value="ثبت">
           </form>
         </div>
       </div>
 
-      <div id="show" class="tabcontent">
-        <h3>show</h3>
-        <p>Tokyo is the capital of Japan.</p>
+      <div id="show" class="show_div">
+        <label for="filter_input">متن مورد نظر را جست و جو کنید</label>
+        <input type="text" class="input" id="filter_input" onkeyup="filter_table()">
+
+        <label for="td_num">شماره ستون</label>
+        <input type="text" class="input" id="td_num">
+
+        <table class="panel_table" id="panel_table">
+          <tr class="header">
+            <th>تلفن 0</th>
+            <th>مدت بیمه نامه 1</th>
+            <th>نام مشاور 3</th>
+            <th>کد ملی 3</th>
+            <th>نام بیمه گذار 4</th>
+            <th>تاریخ صدور 5</th>
+            <th>شماره ی بیمه نامه 6</th>
+            <th>نوع بیمه 7</th>
+            <th>شماره 8</th>
+          </tr>
+          <tr>
+            <td>Alfreds Futterkiste</td>
+            <td>Germany</td>
+            <td>Alfreds Futterkiste</td>
+            <td>dem</td>
+            <td>Alfreds Futterkiste</td>
+            <td>Germany</td>
+            <td>Alfreds Futterkiste</td>
+            <td>Germany</td>
+            <td>Alfreds Futterkiste</td>
+          </tr>
+          <tr>
+            <td>Alfreds Futterkiste</td>
+            <td>Germany</td>
+            <td>Alfreds Futterkiste</td>
+            <td>Germany</td>
+            <td>Alfreds Futterkiste</td>
+            <td>Germany</td>
+            <td>Alfreds Futterkiste</td>
+            <td>Germany</td>
+            <td>Alfreds Futterkiste</td>
+          </tr>
+          <tr>
+            <td>Alfreds Futterkiste</td>
+            <td>Germany</td>
+            <td>Alfreds Futterkiste</td>
+            <td>Germany</td>
+            <td>Alfreds Futterkiste</td>
+            <td>Germany</td>
+            <td>Alfreds Futterkiste</td>
+            <td>Germany</td>
+            <td>Alfreds Futterkiste</td>
+          </tr>
+          <tr>
+            <td>Alfreds Futterkiste</td>
+            <td>Germany</td>
+            <td>Alfreds Futterkiste</td>
+            <td>Germany</td>
+            <td>Alfreds Futterkiste</td>
+            <td>Germany</td>
+            <td>Alfreds Futterkiste</td>
+            <td>Germany</td>
+            <td>Alfreds Futterkiste</td>
+          </tr>
+          <tr>
+            <td>Alfreds Futterkiste</td>
+            <td>Germany</td>
+            <td>Alfreds Futterkiste</td>
+            <td>Germany</td>
+            <td>Alfreds Futterkiste</td>
+            <td>Germany</td>
+            <td>Alfreds Futterkiste</td>
+            <td>Germany</td>
+            <td>Alfreds Futterkiste</td>
+          </tr>
+          <tr>
+            <td>Alfreds Futterkiste</td>
+            <td>Germany</td>
+            <td>Alfreds Futterkiste</td>
+            <td>Germany</td>
+            <td>Alfreds Futterkiste</td>
+            <td>Germany</td>
+            <td>Alfreds Futterkiste</td>
+            <td>Germany</td>
+            <td>Alfreds Futterkiste</td>
+          </tr>
+          <tr>
+            <td>Alfreds Futterkiste</td>
+            <td>Germany</td>
+            <td>Alfreds Futterkiste</td>
+            <td>Germany</td>
+            <td>Alfreds Futterkiste</td>
+            <td>Germany</td>
+            <td>Alfreds Futterkiste</td>
+            <td>Germany</td>
+            <td>Alfreds Futterkiste</td>
+          </tr>
+          <tr>
+            <td>Alfreds Futterkiste</td>
+            <td>Germany</td>
+            <td>Alfreds Futterkiste</td>
+            <td>Germany</td>
+            <td>Alfreds Futterkiste</td>
+            <td>Germany</td>
+            <td>Alfreds Futterkiste</td>
+            <td>Germany</td>
+            <td>Alfreds Futterkiste</td>
+          </tr>
+        </table>
+
       </div>
     </main>
   </div>

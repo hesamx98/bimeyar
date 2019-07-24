@@ -195,3 +195,32 @@ button.comput {
    text-align: center;
    margin-top: 20%;
 }
+
+/* Table */
+.panel_table{
+  border-collapse: collapse;
+  width: 100%;
+  border: 1px solid #ddd;
+  font-size: 18px;
+  color: black;
+}
+
+.panel_table th, .panel_table td {
+  text-align: left;
+  padding: 12px;
+}
+
+.panel_table tr {
+  border-bottom: 1px solid #ddd;
+}
+
+.panel_table tr.header, .panel_table tr:hover {
+  background-color: #f1f1f1;
+}
+
+.show_div{
+  text-align: right;
+  color: black;
+  padding-left: 10%;
+  padding-right: 10%;
+}
