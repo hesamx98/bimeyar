@@ -161,6 +161,7 @@ button.comput {
   padding: 16px;
 }
 
+
 .forgot_btn {
   width: auto;
   padding: 10px 18px;
@@ -169,6 +170,21 @@ button.comput {
   border: 0;
 }
 
+.register_btn {
+  width: auto;
+  padding: 10px 18px;
+  background-color: blue;
+  color: red;
+  border: 0;
+}
+
+.login_btn {
+  width: auto;
+  padding: 10px 18px;
+  background-color: blue;
+  color: black;
+  border: 0;
+}
 /* 404 */
 .body_404{
   background: -webkit-linear-gradient(right,blue,white);
