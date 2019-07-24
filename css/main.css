@@ -173,16 +173,16 @@ button.comput {
 .register_btn {
   width: auto;
   padding: 10px 18px;
-  background-color: blue;
-  color: red;
+  background-color: red;
+  color: white;
   border: 0;
 }
 
 .login_btn {
   width: auto;
   padding: 10px 18px;
-  background-color: blue;
-  color: black;
+  background-color: black;
+  color: white;
   border: 0;
 }
 /* 404 */
