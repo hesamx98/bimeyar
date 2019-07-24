@@ -1,30 +1,29 @@
 <!doctype html>
-<html>
+<html lang="fa">
 <head>
 <meta charset="utf-8">
-<title>Login</title>
+<title>ورود</title>
 	<link rel="stylesheet" href="css/main.css" />
 
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
 <body class="body_login">
-<form class="login_form">
-	<h1 align="center">Login Form</h1>
+<form class="login_form" method="post" action="php/login.php">
+	<h1>فرم ورود</h1>
 	
-	<label for="Username"><b>Username</b></label>
-	<input type="text" placeholder="Username" class="input_login"/>
+	<label for="telephone"><b>تلفن همراه</b></label>
+	<input type="text" id="telephone" name="telephone" class="input"/>
 	
-	<label for="Password"><b>Password</b></label>
-	<input type="password" placeholder="Password" class="input_login"/>
+	<label for="Password"><b>رمز عبور</b></label>
+	<input type="password" id="Password" name="password" class="input"/>
 	
-	<input type="submit" value="Send" class="input_login_button"/>
-	    <label>
-      <input type="checkbox" name="remember"> Remember me
-    </label>
+	<input type="submit" value="Send" class="input_button"/>
+
 	
-	<div align="right">
-    <a href="#"><button type="button" class="forgot_btn">Forgot Password</button></a>
+	<div>
+    <a href="forgot_password.html" target="_self"><button type="button" class="forgot_btn">فراموشی پسورد</button></a>
+    <a href="register.html" target="_self"><button type="button" class="register_btn">ثبت نام</button></a>
 	</div>
 		
 	</form>

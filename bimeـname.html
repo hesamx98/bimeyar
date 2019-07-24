@@ -1,10 +1,92 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="fa">
+
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+  <meta charset="utf-8">
+  <title></title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="manifest" href="site.webmanifest">
+  <meta name="theme-color" content="#fafafa">
+  <script src="js/main.js"></script>
+  <link rel="stylesheet" href="css/main.css">
 </head>
-<body>
+
+<body class="body_panel" onload="close_part()">
+
+<div class="menu">
+  <ul class="ul">
+    <li class="li"><h2>بیمه یار</h2></li>
+    <li class="li"><a href="panel.html">خانه</a></li>
+    <li class="li"><a href="bimeـname.html" class="active">بیمه نامه</a></li>
+    <li class="li"><a href="aghsat.html">اقساط</a></li>
+  </ul>
+</div>
+
+<div class="right_part">
+
+  <div class="sub_menu" onload="close_part()">
+    <div id="navbar">
+      <a onclick="open_part('add')">افزودن</a>
+      <a onclick="open_part('show')">مشاهده</a>
+      <a href="php/exit.php" target="_self" style="float:right">خروج</a>
+    </div>
+  </div>
+
+  <div class="content">
+    <main>
+      <div id="add" class="tabcontent">
+
+
+        <div class="form">
+          <form action="php/add_bime_name.php">
+            <label for="ins_type">نوع بیمه :</label>
+            <select id="ins_type" name="bime_type" class="input">
+              <option value="">ثالث اتومبیل</option>
+              <option value="">بدنه ی اتومبیل</option>
+              <option value="">آتش سوزی</option>
+              <option value="">مسئولیت</option>
+              <option value="">مهندسی</option>
+              <option value="">باربری</option>
+              <option value="">عمر و سرمایه گذاری</option>
+              <option value="">حوادث انفرادی</option>
+            </select>
+
+            <label for="ins_nmber">شماره ی بیمه نامه :</label>
+            <input type="text" class="input" id="ins_nmber" name="ins_nmber">
+
+            <label for="issue_date">تاریخ صدور :</label>
+            <input type="text" class="input" id="issue_date" name="issue_date">
+
+            <label for="name">نام بیمه گذار :</label>
+            <input type="text" class="input" id="name" name="name">
+
+            <label for="national_code">کد ملی :</label>
+            <input type="text" class="input" id="national_code" name="national_code">
+
+            <label for="telephone">تلفن :</label>
+            <input type="text" class="input" id="telephone" name="telephone">
+
+            <label for="time">مدت بیمه نامه ( به روز ) :</label>
+            <input type="text" class="input" id="time" name="time">
+
+            <label for="adviser_name">نام مشاور :</label>
+            <input type="text" class="input" id="adviser_name" name="adviser_name" >
+
+            <input class="input_button" type="submit" value="ثبت">
+          </form>
+        </div>
+      </div>
+
+      <div id="show" class="tabcontent">
+        <h3>show</h3>
+        <p>Tokyo is the capital of Japan.</p>
+      </div>
+    </main>
+  </div>
+
+</div>
 
 </body>
+
 </html>

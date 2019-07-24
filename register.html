@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="fa">
+<head>
+  <meta charset="utf-8">
+  <title>عضویت</title>
+  <link rel="stylesheet" href="css/main.css" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body class="body_login">
+<form class="login_form" method="post" action="php/register.php">
+  <h1>فرم عضویت</h1>
+
+  <label for="name"><b>نام و نام خانوادگی</b></label>
+  <input type="text" id="name" name="name" class="input"/>
+
+  <label for="telephone"><b>تلفن همراه</b></label>
+  <input type="tel" id="telephone" name="telephone" class="input"/>
+
+  <label for="ins"><b>شرکت بیمه مورد فعالیت</b></label>
+  <input type="text" id="ins" name="ins" class="input"/>
+
+  <label for="representation_code"><b>کد نمایندگی</b></label>
+  <input type="text" id="representation_code" name="representation_code" class="input"/>
+
+  <input type="submit" value="Send" class="input_button"/>
+
+  <label>
+    <input type="checkbox" name="remember"> مرا به خاطر داشته باش
+  </label>
+
+  <div>
+    <a href="forgot_password.html"><button type="button" class="forgot_btn">فراموشی پسورد</button></a>
+    <a href="index.html"><button type="button" class="login_btn">ورود</button></a>
+  </div>
+
+</form>
+</body>
+</html>

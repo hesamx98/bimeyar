@@ -1,14 +1,13 @@
 *{
-  margin: 0px;
+  margin: 0;
 }
 body{
-  color: white;
+  color: black;
 }
 
 /* Panel */
 /* Layout */
 .body_panel{
-  background-color: #232323 ;
   color:  white;
 }
 
@@ -24,7 +23,7 @@ body{
 .sub_menu {
   position: fixed;
   width: 80%;
-  background: #ff8c00 ;
+  background: blue ;
 }
 
 .content{
@@ -32,40 +31,40 @@ body{
 }
 
 main {
-  background: #232323;
+  background: white;
 }
 
 /* Menu */
 
-.ul_0 {
+.ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
   width: 20%;
-  background-color: black;
+  background-color: blue;
   position: fixed;
   height: 100%;
   overflow: auto;
 }
-.li_1{
+.li{
   text-align: center;
   margin: 10px;
 }
-.li_0 a {
+.li a {
   display: block;
   color: white;
   padding: 8px 16px;
   text-decoration: none;
 }
 
-.li_0 a.active {
-  background-color: #ff8c00;
-  color: white;
+.li a:hover {
+  background-color: white;
+  color: blue;
 }
 
-.li_0 a:hover:not(.active) {
-  background-color: #ff8c00;
-  color: white;
+.li a.active {
+  background-color: white;
+  color: blue;
 }
 
 /* Submenu */
@@ -73,13 +72,13 @@ main {
 #navbar {
   text-align: center;
   overflow: hidden;
-  background-color: black;
+  background-color: blue;
 }
 
 #navbar a {
   float: left;
   display: block;
-  color: #f2f2f2;
+  color: white;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
@@ -87,79 +86,38 @@ main {
 }
 
 #navbar a:hover {
-  background-color: #ff8c00;
-  color: white;
+  background-color: white;
+  color: blue;
 }
 
 #navbar a.active {
-  background-color: #ff8c00;
-  color: white;
+  background-color: white;
+  color: blue;
 }
 
-/* Rules */
-.body_rules{
-  background-color: black ;
-  color:  white;
-}
-
-table {
-	border-top: 0;
-	border-collapse: collapse;
-	border: 5px solid #ff8c00;
-	width: 100%;
-}
-
-th {
-	background-color: #ff8c00;
-	color: white;
-}
-
-th,td {
-	border: 5px solid #ff8c00;
-	text-align: center;
-	padding: 7px;
-}
-
-.row_td {
-	width: 5%;
-}
-
-.slave_in_td {
-	width: 5%;
-}
-
-.roules_td {
-	width: 85%;
-}
-
-.slave_out_td {
-	width: 5%;
-}
-
-textarea {
-	width: 100%;
-  background-color: black;
-  color: white;
-}
 
 /* Login */
-
+form h1{
+  text-align: center;
+}
 .body_login{
-  background: black;
-  background: -webkit-linear-gradient(right,#ff8c00,black);
+  background: -webkit-linear-gradient(right,blue,white);
+  text-align: right;
 }
 
-.input_login {
+.input {
 	width: 100%;
-	padding: 12px 20px;
-	margin: 8px 0;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-top: 5px;
+  margin-bottom: 5px;
 	display: inline-block;
 	border: 1px solid #ccc;
 	box-sizing: border-box;
 }
 
-.input_login_button {
-	background-color: black;
+.input_button {
+	background-color: blue;
 	color: white;
 	padding: 14px 20px;
 	margin: 8px 0;
@@ -168,7 +126,7 @@ textarea {
 	width: 100%;
 }
 
-.input_login_button:hover {
+.input_button:hover {
 	opacity: 0.8;
 }
 
@@ -178,8 +136,15 @@ textarea {
 	padding-top: 10%;
 }
 
+.form {
+  padding-left: 10%;
+  padding-right: 10%;
+  color: black;
+  text-align: right;
+}
+
 button.comput {
-	background-color: black;
+	background-color: blue;
 	border: none;
 	color: white;
 	text-align: center;
@@ -199,18 +164,18 @@ button.comput {
 .forgot_btn {
   width: auto;
   padding: 10px 18px;
-  background-color: black;
+  background-color: blue;
   color: white;
   border: 0;
 }
 
 /* 404 */
 .body_404{
-  background: -webkit-linear-gradient(right,#ff8c00,black);
-  color: white;
+  background: -webkit-linear-gradient(right,blue,white);
+  color: black;
 }
 
 .div_404{
    text-align: center;
-  margin-top: 20%;
+   margin-top: 20%;
 }
