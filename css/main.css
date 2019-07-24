@@ -32,6 +32,10 @@ body{
 
 main {
   background: white;
+  text-align: right;
+  color: black;
+  padding-left: 10%;
+  padding-right: 10%;
 }
 
 /* Menu */
@@ -208,6 +212,7 @@ button.comput {
 .panel_table th, .panel_table td {
   text-align: left;
   padding: 12px;
+  font-size: medium;
 }
 
 .panel_table tr {
@@ -218,9 +223,28 @@ button.comput {
   background-color: #f1f1f1;
 }
 
-.show_div{
-  text-align: right;
-  color: black;
-  padding-left: 10%;
-  padding-right: 10%;
+
+.column {
+  float: left;
+  width: 25%;
+  height: 200px; /* Should be removed. Only for demonstration */
+  text-align: center;
+  padding-top: 1%;
+  color: white;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.chart{
+ padding-left: 20%;
+  padding-right: 20%;
+}
+
+.panel_text{
+  text-align: center;
+  padding-top: 20%;
 }
