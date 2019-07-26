@@ -103,7 +103,7 @@
                 echo "<td>" . $r['percent'] . "</td>";
                 echo "<td>" . $r['telephone'] . "</td>";
                 echo "<td>" . $r['time'] . "</td>";
-                echo "<td>" . $r['name'] . "</td>";
+                echo "<td>"  . $r['name'] . "</td>";
                 echo "<td>" . $r['ghest_id'] . "</td>";
                 echo "</tr>";
 
