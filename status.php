@@ -17,9 +17,9 @@
 <div class="menu">
   <ul class="ul">
     <li class="li"><h2>بیمه یار</h2></li>
-    <li class="li"><a href="panel.html">خانه</a></li>
-    <li class="li"><a href="bimeـname.html">بیمه نامه</a></li>
-    <li class="li"><a href="aghsat.html">اقساط</a></li>
+    <li class="li"><a href="panel.php">خانه</a></li>
+    <li class="li"><a href="bimeـname.php">بیمه نامه</a></li>
+    <li class="li"><a href="aghsat.php">اقساط</a></li>
   </ul>
 </div>
 

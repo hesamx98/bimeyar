@@ -18,15 +18,15 @@ else
 
 if($command == "show" && $table !== null){
 
-  header('Content-Type: text/html; charset=utf-8');
+    header('Content-Type: text/html; charset=utf-8');
 
-  include_once ("../lib/database.php");
+    include_once ("../lib/database.php");
 
-  $obj = new database();
-  $connection = $obj->connect();
-  $sql = "SELECT * FROM `users`;";
+    $obj = new database();
+    $connection = $obj->connect();
+    $sql = "SELECT * FROM `users`;";
 
-  $res = $obj->query($sql,$connection);
+    $res = $obj->query($sql,$connection);
 
   echo json_encode($res);
 }

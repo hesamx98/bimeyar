@@ -17,9 +17,9 @@
 <div class="menu">
   <ul class="ul">
     <li class="li"><h2>بیمه یار</h2></li>
-    <li class="li"><a href="panel.html">خانه</a></li>
-    <li class="li"><a href="bimeـname.html" class="active">بیمه نامه</a></li>
-    <li class="li"><a href="aghsat.html">اقساط</a></li>
+    <li class="li"><a href="panel.php">خانه</a></li>
+    <li class="li"><a href="bimeـname.php" class="active">بیمه نامه</a></li>
+    <li class="li"><a href="aghsat.php">اقساط</a></li>
   </ul>
 </div>
 
@@ -36,8 +36,6 @@
   <div class="content">
     <main>
       <div id="add">
-
-
         <div class="form">
           <form action="php/add_bime_name.php">
             <label  for="ins_type">نوع بیمه :</label>
@@ -97,94 +95,40 @@
             <th>نوع بیمه 7</th>
             <th>شماره 8</th>
           </tr>
-          <tr>
-            <td>Alfreds Futterkiste</td>
-            <td>Germany</td>
-            <td>Alfreds Futterkiste</td>
-            <td>dem</td>
-            <td>Alfreds Futterkiste</td>
-            <td>Germany</td>
-            <td>Alfreds Futterkiste</td>
-            <td>Germany</td>
-            <td>Alfreds Futterkiste</td>
-          </tr>
-          <tr>
-            <td>Alfreds Futterkiste</td>
-            <td>Germany</td>
-            <td>Alfreds Futterkiste</td>
-            <td>Germany</td>
-            <td>Alfreds Futterkiste</td>
-            <td>Germany</td>
-            <td>Alfreds Futterkiste</td>
-            <td>Germany</td>
-            <td>Alfreds Futterkiste</td>
-          </tr>
-          <tr>
-            <td>Alfreds Futterkiste</td>
-            <td>Germany</td>
-            <td>Alfreds Futterkiste</td>
-            <td>Germany</td>
-            <td>Alfreds Futterkiste</td>
-            <td>Germany</td>
-            <td>Alfreds Futterkiste</td>
-            <td>Germany</td>
-            <td>Alfreds Futterkiste</td>
-          </tr>
-          <tr>
-            <td>Alfreds Futterkiste</td>
-            <td>Germany</td>
-            <td>Alfreds Futterkiste</td>
-            <td>Germany</td>
-            <td>Alfreds Futterkiste</td>
-            <td>Germany</td>
-            <td>Alfreds Futterkiste</td>
-            <td>Germany</td>
-            <td>Alfreds Futterkiste</td>
-          </tr>
-          <tr>
-            <td>Alfreds Futterkiste</td>
-            <td>Germany</td>
-            <td>Alfreds Futterkiste</td>
-            <td>Germany</td>
-            <td>Alfreds Futterkiste</td>
-            <td>Germany</td>
-            <td>Alfreds Futterkiste</td>
-            <td>Germany</td>
-            <td>Alfreds Futterkiste</td>
-          </tr>
-          <tr>
-            <td>Alfreds Futterkiste</td>
-            <td>Germany</td>
-            <td>Alfreds Futterkiste</td>
-            <td>Germany</td>
-            <td>Alfreds Futterkiste</td>
-            <td>Germany</td>
-            <td>Alfreds Futterkiste</td>
-            <td>Germany</td>
-            <td>Alfreds Futterkiste</td>
-          </tr>
-          <tr>
-            <td>Alfreds Futterkiste</td>
-            <td>Germany</td>
-            <td>Alfreds Futterkiste</td>
-            <td>Germany</td>
-            <td>Alfreds Futterkiste</td>
-            <td>Germany</td>
-            <td>Alfreds Futterkiste</td>
-            <td>Germany</td>
-            <td>Alfreds Futterkiste</td>
-          </tr>
-          <tr>
-            <td>Alfreds Futterkiste</td>
-            <td>Germany</td>
-            <td>Alfreds Futterkiste</td>
-            <td>Germany</td>
-            <td>Alfreds Futterkiste</td>
-            <td>Germany</td>
-            <td>Alfreds Futterkiste</td>
-            <td>Germany</td>
-            <td>Alfreds Futterkiste</td>
-          </tr>
+          <?php
+          include "php/lib/database.php";
+          try {
+
+            $obj = new database();
+            $conn = $obj->connect();
+
+            $sql = 'SELECT * FROM bime_name';
+
+            $q = $conn->query($sql);
+            $q->setFetchMode(PDO::FETCH_ASSOC);
+
+            while ($r = $q->fetch()):
+
+              echo "<tr>";
+              echo "<td>" . $r['telephone'] . "</td>";
+              echo "<td>" . $r['time'] . "</td>";
+              echo "<td>" . $r['adviser_name'] . "</td>";
+              echo "<td>" . $r['national_code'] . "</td>";
+              echo "<td>" . $r['name'] . "</td>";
+              echo "<td>" . $r['date'] . "</td>";
+              echo "<td>" . $r['ins_nmber'] . "</td>";
+              echo "<td>" . $r['ins_type'] . "</td>";
+              echo "<td>" . $r['ins_id'] . "</td>";
+              echo "</tr>";
+
+            endwhile;
+
+          } catch (PDOException $pe) {
+            die("Could not connect to the database :" . $pe->getMessage());
+          }
+
+          ?>
+
         </table>
 
       </div>

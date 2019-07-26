@@ -17,9 +17,9 @@
 <div class="menu">
   <ul class="ul">
     <li class="li"><h2>بیمه یار</h2></li>
-    <li class="li"><a href="panel.html">خانه</a></li>
-    <li class="li"><a href="bimeـname.html">بیمه نامه</a></li>
-    <li class="li"><a href="aghsat.html" class="active">اقساط</a></li>
+    <li class="li"><a href="panel.php">خانه</a></li>
+    <li class="li"><a href="bimeـname.php">بیمه نامه</a></li>
+    <li class="li"><a href="aghsat.php" class="active">اقساط</a></li>
   </ul>
 </div>
 
@@ -37,8 +37,6 @@
     <main>
       <main>
         <div id="add">
-
-
           <div class="form">
             <form action="php/add_aghsat.php">
 
@@ -84,84 +82,38 @@
               <th>نام 6</th>
               <th>شماره 7</th>
             </tr>
-            <tr>
-              <td>Alfreds Futterkiste</td>
-              <td>Germany</td>
-              <td>نزدیک سر رسید</td>
-              <td>نام</td>
-              <td>Germany</td>
-              <td>Alfreds Futterkiste</td>
-              <td>Germany</td>
-            </tr>
-            <tr>
-              <td>Alfreds Futterkiste</td>
-              <td>Germany</td>
-              <td>Alfreds Futterkiste</td>
-              <td>Germany</td>
-              <td>Germany</td>
-              <td>Alfreds Futterkiste</td>
-              <td>Germany</td>
-            </tr>
-            <tr>
-              <td>Alfreds Futterkiste</td>
-              <td>Germany</td>
-              <td>Germany</td>
-              <td>Alfreds Futterkiste</td>
-              <td>Germany</td>
-              <td>Alfreds Futterkiste</td>
-              <td>Germany</td>
-            </tr>
-            <tr>
-              <td>Alfreds Futterkiste</td>
-              <td>Germany</td>
-              <td>Germany</td>
-              <td>Alfreds Futterkiste</td>
-              <td>Germany</td>
-              <td>Alfreds Futterkiste</td>
-              <td>Germany</td>
-            </tr>
-            <tr>
-              <td>Alfreds Futterkiste</td>
-              <td>Germany</td>
-              <td>Germany</td>
-              <td>Alfreds Futterkiste</td>
-              <td>Germany</td>
-              <td>Alfreds Futterkiste</td>
-              <td>Germany</td>
-            </tr>
-            <tr>
-              <td>Alfreds Futterkiste</td>
-              <td>Germany</td>
-              <td>Alfreds Futterkiste</td>
-              <td>Germany</td>
-              <td>Germany</td>
-              <td>Alfreds Futterkiste</td>
-              <td>Germany</td>
-            </tr>
-            <tr>
-              <td>Alfreds Futterkiste</td>
-              <td>Germany</td>
-              <td>Germany</td>
-              <td>Alfreds Futterkiste</td>
-              <td>Germany</td>
-              <td>Alfreds Futterkiste</td>
-              <td>Germany</td>
-              <td>Alfreds Futterkiste</td>
-              <td>Germany</td>
-              <td>Alfreds Futterkiste</td>
-            </tr>
-            <tr>
-              <td>Alfreds Futterkiste</td>
-              <td>Germany</td>
-              <td>Germany</td>
-              <td>Alfreds Futterkiste</td>
-              <td>Germany</td>
-              <td>Alfreds Futterkiste</td>
-              <td>Germany</td>
-              <td>Alfreds Futterkiste</td>
-              <td>Germany</td>
-              <td>Alfreds Futterkiste</td>
-            </tr>
+            <?php
+            include "php/lib/database.php";
+            try {
+
+              $obj = new database();
+              $conn = $obj->connect();
+
+              $sql = 'SELECT * FROM aghsat';
+
+              $q = $conn->query($sql);
+              $q->setFetchMode(PDO::FETCH_ASSOC);
+
+              while ($r = $q->fetch()):
+
+                echo "<tr>";
+                echo "<td>" . $r['status'] . "</td>";
+                echo "<td>" . $r['price'] . "</td>";
+                echo "<td>" . $r['date'] . "</td>";
+                echo "<td>" . $r['percent'] . "</td>";
+                echo "<td>" . $r['telephone'] . "</td>";
+                echo "<td>" . $r['time'] . "</td>";
+                echo "<td>" . $r['name'] . "</td>";
+                echo "<td>" . $r['ghest_id'] . "</td>";
+                echo "</tr>";
+
+              endwhile;
+
+            } catch (PDOException $pe) {
+              die("Could not connect to the database :" . $pe->getMessage());
+            }
+
+            ?>
           </table>
 
         </div>
