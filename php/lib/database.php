@@ -26,14 +26,13 @@ class database
 
   public function insert($sql,$connection){
     try {
-
       $stmt = $connection->query($sql);
 
       if($stmt == true)
-        echo "true";
+        return true;
 
       else
-        echo "false";
+        return false;
 
     } catch
     (PDOException $e) {

@@ -1,2 +1,2 @@
 <?php
- include_once ("lib/DB_class.php");
+ include_once ("lib/database.php");
