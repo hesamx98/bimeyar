@@ -13,6 +13,6 @@ $obj = new database();
 $connection = $obj->connect();
 $sql = "INSERT INTO 'bime_name' VALUES (DEFAULT ,'$ins_nmber','$issue_date','$percent','$telephone','$time','$name','$status');";
 
-$res = $obj->insert($sql,$connection);
+$res = $obj->sql($sql,$connection);
 
 header("Location: ../status.php?res=$res");

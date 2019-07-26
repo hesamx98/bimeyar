@@ -13,7 +13,7 @@ $obj = new database();
 $connection = $obj->connect();
 $sql = "INSERT INTO 'aghsat' VALUES (DEFAULT ,'$price','$issue_date ','$percent','$telephone','$time','$name','$status');";
 
-$res = $obj->insert($sql,$connection);
+$res = $obj->sql($sql,$connection);
 
 header("Location: ../status.php?res=$res");
 

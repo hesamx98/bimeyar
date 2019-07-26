@@ -10,6 +10,6 @@ $obj = new database();
 $connection = $obj->connect();
 $sql = "INSERT INTO `users` VALUES (DEFAULT ,'$name','$telephone','$ins','$representation_code');";
 
-$res = $obj->insert($sql,$connection);
+$res = $obj->sql($sql,$connection);
 
 header("Location: ../status.php?res=$res");

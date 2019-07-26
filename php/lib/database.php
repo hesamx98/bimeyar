@@ -1,11 +1,12 @@
 <?php
+
 class database
 {
 
 
-  public function connect(){
-    try
-    {
+  public function connect()
+  {
+    try {
       $host = "localhost";
       $dbname = "bimeyar";
       $username = "root";
@@ -15,20 +16,19 @@ class database
       $connection->exec('set names utf8');
 
       return $connection;
-    }
-
-    catch
-    (PDOException $e){
+    } catch
+    (PDOException $e) {
       echo $e . getMessage();
-      return($e . errorInfo());
+      return ($e . errorInfo());
     }
   }
 
-  public function insert($sql,$connection){
+  public function sql($sql, $connection)
+  {
     try {
       $stmt = $connection->query($sql);
 
-      if($stmt == true)
+      if ($stmt == true)
         return true;
 
       else
@@ -36,6 +36,18 @@ class database
 
     } catch
     (PDOException $e) {
+      echo $e . getMessage();
+      print_r($e . errorInfo());
+    }
+  }
+
+  public function query($sql, $connection)
+  {
+    try {
+      $result = $connection->query($sql);
+      $data = $result->fetchAll(PDO::FETCH_ASSOC);
+      return $data;
+    } catch (PDOException $e) {
       echo $e . getMessage();
       print_r($e . errorInfo());
     }
